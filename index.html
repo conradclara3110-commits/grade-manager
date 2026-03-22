@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grade Management System</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        input, button, select { margin: 5px; padding: 5px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid black; padding: 8px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<h2>Grade Management System</h2>
+
+<input type="text" id="name" placeholder="Student Name">
+<input type="text" id="scores" placeholder="Scores (e.g. 80,90,70)">
+<button onclick="addStudent()">Add Student</button>
+
+<br>
+
+<select id="gradeFilter" onchange="filterStudents()">
+    <option value="all">All</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="F">F</option>
+</select>
+
+<input type="text" id="search" placeholder="Search by name" onkeyup="searchStudent()">
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Scores</th>
+            <th>Average</th>
+            <th>Grade</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="studentTable"></tbody>
+</table>
+
+<h3>Class Statistics</h3>
+<p id="stats"></p>
+
+<script src="script.js"></script>
+</body>
+</html>
